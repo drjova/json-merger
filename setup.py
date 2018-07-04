@@ -67,9 +67,14 @@ setup_requires = [
 ]
 
 install_requires = [
-    'dictdiffer>=0.6.0',
+    # https://github.com/inveniosoftware/dictdiffer/pull/111
+    # 'dictdiffer>=0.6.0',
     'six>=1.10.0',
     'pyrsistent>=0.11.13'
+]
+
+dependency_links = [
+    'https://github.com/inspirehep/dictdiffer/tarball/master#egg=dictdiffer'
 ]
 
 packages = find_packages()
@@ -99,6 +104,7 @@ setup(
     },
     extras_require=extras_require,
     install_requires=install_requires,
+    dependency_links=dependency_links,
     setup_requires=setup_requires,
     tests_require=tests_require,
     classifiers=[
